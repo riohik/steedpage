@@ -1,8 +1,10 @@
 class EventsController < ApplicationController
+  layout "v2/application"
   def index
-    @events = [
-        "「Go Now!」 Vol1",
-        "「Go Now!」 Vol2"
-    ]
+    @events = Event.all
+    @events.reverse_order!
+  end
+  def archive
+    @event = Event.find_by(link: params[:link])
   end
 end

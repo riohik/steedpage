@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "top" => "home#top"
   get "profile" => "home#profile"
   get "members" => "home#members"
+  get "gonow" => "events#index"
+  get "gonow/:link" => "events#archive"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

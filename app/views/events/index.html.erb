@@ -1,9 +1,9 @@
-
 <div class="main events-index">
     <div class="container">
         <% @events.each do |event| %>
             <div class="events-index-item">
-                <%= event %>    
+                <!--<a href = "/archives/"<%= event.link %>><%= event.title %></a>-->
+                <%= link_to(event.title,"/gonow/#{event.link}") %>
             </div>
         <% end %>
   </div>
